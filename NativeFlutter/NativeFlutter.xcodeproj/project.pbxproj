@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2D6453A8CC0131E74317418 /* Pods_NativeFlutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924B7858ADA11FFF1344D1CB /* Pods_NativeFlutter.framework */; };
 		D520F98F24AEDC1F001CD824 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D520F98E24AEDC1F001CD824 /* AppDelegate.m */; };
 		D520F99224AEDC1F001CD824 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D520F99124AEDC1F001CD824 /* SceneDelegate.m */; };
 		D520F99524AEDC1F001CD824 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D520F99424AEDC1F001CD824 /* ViewController.m */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		924B7858ADA11FFF1344D1CB /* Pods_NativeFlutter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NativeFlutter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D520F98A24AEDC1F001CD824 /* NativeFlutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeFlutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D520F98D24AEDC1F001CD824 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D520F98E24AEDC1F001CD824 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +31,8 @@
 		D520F99C24AEDC23001CD824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D520F99E24AEDC23001CD824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D520F99F24AEDC23001CD824 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D77F561368DA81C608A8927B /* Pods-NativeFlutter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeFlutter.debug.xcconfig"; path = "Target Support Files/Pods-NativeFlutter/Pods-NativeFlutter.debug.xcconfig"; sourceTree = "<group>"; };
+		F20B7EA1CD160FC7FD228C11 /* Pods-NativeFlutter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeFlutter.release.xcconfig"; path = "Target Support Files/Pods-NativeFlutter/Pods-NativeFlutter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D6453A8CC0131E74317418 /* Pods_NativeFlutter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8596ED05EE2242E79BA7C921 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D77F561368DA81C608A8927B /* Pods-NativeFlutter.debug.xcconfig */,
+				F20B7EA1CD160FC7FD228C11 /* Pods-NativeFlutter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D29EF7BA01E53DDD6F406047 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				924B7858ADA11FFF1344D1CB /* Pods_NativeFlutter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D520F98124AEDC1F001CD824 = {
 			isa = PBXGroup;
 			children = (
 				D520F98C24AEDC1F001CD824 /* NativeFlutter */,
 				D520F98B24AEDC1F001CD824 /* Products */,
+				8596ED05EE2242E79BA7C921 /* Pods */,
+				D29EF7BA01E53DDD6F406047 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D520F9A324AEDC23001CD824 /* Build configuration list for PBXNativeTarget "NativeFlutter" */;
 			buildPhases = (
+				27FCD28C4A7BC2C94F63D1BD /* [CP] Check Pods Manifest.lock */,
 				D520F98624AEDC1F001CD824 /* Sources */,
 				D520F98724AEDC1F001CD824 /* Frameworks */,
 				D520F98824AEDC1F001CD824 /* Resources */,
+				6536BE8838C024DA4E8A3B14 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +166,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27FCD28C4A7BC2C94F63D1BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NativeFlutter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6536BE8838C024DA4E8A3B14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NativeFlutter/Pods-NativeFlutter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NativeFlutter/Pods-NativeFlutter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NativeFlutter/Pods-NativeFlutter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D520F98624AEDC1F001CD824 /* Sources */ = {
@@ -287,16 +355,18 @@
 		};
 		D520F9A424AEDC23001CD824 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D77F561368DA81C608A8927B /* Pods-NativeFlutter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B478Z2VECP;
 				INFOPLIST_FILE = NativeFlutter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orvibo.NativeFlutter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orvibo.cloudPlatform;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,16 +374,18 @@
 		};
 		D520F9A524AEDC23001CD824 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F20B7EA1CD160FC7FD228C11 /* Pods-NativeFlutter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B478Z2VECP;
 				INFOPLIST_FILE = NativeFlutter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orvibo.NativeFlutter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orvibo.cloudPlatform;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

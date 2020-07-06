@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - fluttermodule (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `../framework/engine`)
+  - fluttermodule (from `../framework/appframework`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: "../framework/engine"
+  fluttermodule:
+    :path: "../framework/appframework"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  fluttermodule: 53bb927120fe19db7c09150a908769f5de1b7b7f
+
+PODFILE CHECKSUM: d4a1cbb4a2ce3f018ac8e04a6d1b1451fa6e6611
+
+COCOAPODS: 1.9.3

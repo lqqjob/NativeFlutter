@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -6,6 +7,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -42,8 +44,38 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+
+Future<List<Message>> getDatas() async {
+  List<Message> messageList = [];
+  final Dio dio = Dio();
+  final response = await dio
+      .get('http://rap2.taobao.org:38080/app/mock/257590/getChatData');
+  if (response.statusCode == 200) {
+    final responseBody = response.data;
+
+    List _list = responseBody['chatList'];
+    for (int i = 0; i < _list.length; i++) {
+      Message message = Message.fromMap(_list[i]);
+      messageList.add(message);
+    }
+
+    print('网络请求回来数据$responseBody');
+    return messageList;
+  } else {
+    throw Exception('statusCode:${response.statusCode}');
+  }
+}
+
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+
+
+  @override
+  void initState() {
+    getDatas();
+    super.initState();
+  }
+
 
   void _incrementCounter() {
     setState(() {
@@ -105,6 +137,22 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class Message {
+  final String name;
+  final String imageUrl;
+  final String message;
+
+  Message({this.name, this.imageUrl, this.message});
+
+  factory Message.fromMap(Map map) {
+    return Message(
+      name: map['name'],
+      imageUrl: map['imageUrl'],
+      message: map['message'],
     );
   }
 }
